@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rendertheme 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://mapsforge.org/renderTheme"
+    xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd"
+	version="5">
+
+	<!-- start prow -->
+	<rule e="way" k="prow_type" v="*">
+
+		<!--	prow features available in map database from zoom level 8+	-->
+
+		<rule e="way" k="prow_type" v="boat">
+			<line stroke="#0000FF" stroke-width="1.0" stroke-dasharray="4,2" stroke-linecap="butt" />
+		</rule>
+
+		<rule e="way" k="prow_type" v="bridleway">
+			<line stroke="#FF00FF" stroke-width="1.0" stroke-dasharray="6,3" stroke-linecap="butt" />
+		</rule>
+
+		<rule e="way" k="prow_type" v="footpath">
+			<line stroke="#FF0000" stroke-width="1.0" stroke-dasharray="8,4" stroke-linecap="butt" />
+		</rule>
+
+		<rule e="way" k="prow_type" v="restricted_byway">
+			<line stroke="#00FF00" stroke-width="1.0" stroke-dasharray="10,5" stroke-linecap="butt" />
+		</rule>
+
+		<rule e="way" k="prow_type" v="*" zoom-min="12">
+			<pathText k="name" font-style="normal" font-size="12" stroke="#FFFF00" />
+		</rule>
+
+	</rule>
+	<!-- end prow -->
+
+</rendertheme>
