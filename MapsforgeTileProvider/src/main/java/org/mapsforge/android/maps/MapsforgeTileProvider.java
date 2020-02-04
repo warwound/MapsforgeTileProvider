@@ -41,7 +41,7 @@ import java.io.IOException;
 
 public class MapsforgeTileProvider implements TileProvider {
 
-	private static final float MAPSFORGE_TILE_PROVIDER_VERSION=1.1f;
+	private static final float MAPSFORGE_TILE_PROVIDER_VERSION=1.2f;
 
 	private static final String TAG=MapsforgeTileProvider.class.getSimpleName();
 
@@ -161,6 +161,10 @@ public class MapsforgeTileProvider implements TileProvider {
 
 		public void setCacheLabels(boolean cacheLabels){
 			this.cacheLabels=cacheLabels;
+		}
+
+		public void setHillsRenderConfig(HillsRenderConfig hillsRenderConfig){
+			this.hillsRenderConfig=hillsRenderConfig;
 		}
 
 		public void setLabelsOnly(boolean labelsOnly) {
