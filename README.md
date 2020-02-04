@@ -1,5 +1,5 @@
 # MapsforgeTileProvider
-A GoogleMap TileProvider that renders tiles from a Mapsforge map database file
+MapsforgeTileProvider extends the android GoogleMap TileProvider class, rendering tiles from a Mapsforge map database file.
 
 MapsforgeTileProviderExample shows typical usage:
 
