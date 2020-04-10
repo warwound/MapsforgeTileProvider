@@ -41,24 +41,23 @@ import java.io.IOException;
 
 public class MapsforgeTileProvider implements TileProvider {
 
-	private static final float MAPSFORGE_TILE_PROVIDER_VERSION=1.2f;
+	private static final float MAPSFORGE_TILE_PROVIDER_VERSION=1.3f;
 
 	private static final String TAG=MapsforgeTileProvider.class.getSimpleName();
 
 	private static boolean androidGraphicFactoryCreated=false;
 
 	private final ByteArrayOutputStream byteArrayOutputStream;
-	private final boolean cacheLabels;
-	private final DatabaseRenderer databaseRenderer;
-	private final DisplayModel displayModel;
-	private final TileCache inMemoryTileCache;
-	private final boolean isTransparent;
-	private final boolean labelsOnly;
-	private final MapDataStore mapDataStore;
-	private final com.google.android.gms.maps.model.Tile noTileTile;
-	private final RenderThemeFuture renderThemeFuture;
-	private final float textScale;
-	private final int tileSize;
+	protected final DatabaseRenderer databaseRenderer;
+	protected final DisplayModel displayModel;
+	protected final TileCache inMemoryTileCache;
+	protected final boolean isTransparent;
+	protected final boolean labelsOnly;
+	protected final MapDataStore mapDataStore;
+	protected final com.google.android.gms.maps.model.Tile noTileTile;
+	protected final RenderThemeFuture renderThemeFuture;
+	protected final float textScale;
+	protected final int tileSize;
 
 	public MapsforgeTileProvider(Context context, MapsforgeTileProviderOptions mapsForgeTileProviderOptions){
 
@@ -68,7 +67,7 @@ public class MapsforgeTileProvider implements TileProvider {
 		}
 
 		byteArrayOutputStream=new ByteArrayOutputStream(mapsForgeTileProviderOptions.outputStreamCapacity);
-		cacheLabels=mapsForgeTileProviderOptions.cacheLabels;
+		boolean cacheLabels=mapsForgeTileProviderOptions.cacheLabels;
 		displayModel = new FixedTileSizeDisplayModel(mapsForgeTileProviderOptions.tileSize);
 		inMemoryTileCache = new InMemoryTileCache(mapsForgeTileProviderOptions.tileCacheCapacity);
 		isTransparent=mapsForgeTileProviderOptions.isTransparent;
